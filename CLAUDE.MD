@@ -446,11 +446,24 @@ mc mirror minio1/mailboxes aws-s3/backup-mailboxes
 
 ### 11.1 Phase 1: 인프라 구축 (2주)
 **담당**: 인프라팀, DB팀
-- [ ] Ubuntu 22.04 서버 설치 및 기본 설정
-- [ ] PostgreSQL 14 설치 및 데이터베이스 스키마 생성
-- [ ] MinIO 클러스터 구성 및 버킷 생성
+- [x] Ubuntu 22.04 서버 설치 및 기본 설정 ✅
+- [x] PostgreSQL 14 설치 (데이터베이스 생성 완료, 스키마 생성 예정) ✅
+- [x] MinIO 클러스터 구성 및 버킷 생성 ✅
 - [ ] TLS 인증서 발급 및 방화벽 설정
 - [ ] 모니터링 시스템 (Prometheus + Grafana) 설치
+
+**완료된 작업 상세**:
+- ✅ PostgreSQL 14 설치 완료
+  - 사용자: techmail (비밀번호: .env 파일에 저장)
+  - 데이터베이스: mailserver 생성 완료
+- ✅ MinIO 설정 완료
+  - 버킷: mail-tlabs-team
+  - 정책: mail-server-policy
+  - 사용자: mailserver-user
+  - Access Key 발급 및 .env 저장
+- ✅ LDAP 서버 정보 .env에 저장
+- ✅ Git 저장소 초기화 및 GitHub 연동
+- ✅ 보안 설정: .gitignore로 민감한 파일 보호
 
 ### 11.2 Phase 2: 메일 시스템 핵심 구축 (3주)
 **담당**: 백엔드팀, 보안팀
