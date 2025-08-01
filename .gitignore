@@ -3,6 +3,11 @@
 .env.local
 .env.production
 
+# Sensitive documentation
+docs/*setup*.md
+docs/*config*.md
+docs/minio-setup.md
+
 # Python
 __pycache__/
 *.py[cod]
